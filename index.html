@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monuments de Paris</title>
+    <title>Au Temps de Paris</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <img src="logo-ATP.jpg" alt="Logo" class="header-logo">
+<body> 
+    <header> --- En tête du site avec l'accès aux quatre section ---
+        <img src="logo-ATP.png" alt="Logo" class="header-logo"> => permet de mettre le logo
         <h1>AU TEMPS DE PARIS</h1>
         <p>Écoutez le Patrimoine vous raconter l'Histoire de France</p>
     </header>
 
-   <nav>
+   <nav> --- Section qui permet de naviguer entre les quatre sections ---
     <a href="#" onclick="showSection('carte'); return false;">Carte de Paris</a>
     <a href="#" onclick="showSection('parcours'); return false;">Parcours Historique</a>
     <a href="#" onclick="showSection('fiches'); return false;">Nos monuments</a>
@@ -24,13 +24,13 @@
 </nav>
 
     <div class="container">
-        <section id="carte" class="carte-section">
-            <h2>Carte de Paris et ses Monuments</h2>
+        <section id="carte" class="carte-section"> --- Section principale avec la carte ---
+            <h2>Carte de Paris et ses Monuments</h2> --> Titre de la section 
             <div class="carte-container">
-                <div class="carte-paris">
+                <div class="carte-paris"> => Ici apparaissent les points clicable qui permettent de relier les monuments à des morceaux de l'histoire de France via le parcours historique 
                     <div class="monument-point contemporaine" data-name="Sacré-Cœur" data-monument="sacrecoeur" 
-                         style="left: 52%; top: 0%;" onclick="showEtape('sacrecoeur')"></div>
-                    <div class="monument-point contemporaine" data-name="Gare Saint-Lazare" data-monument="gare-saint-lazare" 
+                         style="left: 52%; top: 0%;" onclick="showEtape('sacrecoeur')"></div> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "point" sur la certe avec sa localisation sur la feuille
+                        <div class="monument-point contemporaine" data-name="Gare Saint-Lazare" data-monument="gare-saint-lazare" 
                          style="left: 38%; top: 17%;" onclick="showEtape('gare-saint-lazare')"></div>
                     <div class="monument-point contemporaine" data-name="Arc de Triomphe" data-monument="arc" 
                          style="left: 11%; top: 22%;" onclick="showEtape('arc')"></div>
@@ -96,11 +96,12 @@
                          style="left: 49%; top: 69%;" onclick="showEtape('palais-du-luxembourg')"></div>
                     <div class="monument-point contemporaine" data-name="Palais de la Porte Dorée" data-monument="porte-dorée" 
                          style="left: 98%; top: 91%;" onclick="showEtape('porte-dorée')"></div>
+                    
                     </div>
-                </section-carte>
             </div>
-            <div class="legende">
-                    <div class="legende-item">
+
+            <div class="legende"> --- légende des points qui classe les monuments en quatre périodes ---
+                    <div class="legende-item">  
                         <div class="legende-color" style="background-color: #d4af37;"></div>
                         <span>Momunements Antiques</span>
                     </div>
@@ -118,12 +119,13 @@
                     </div>
                 </div>            
         </section>
-        <section id="fiches" class="fiches-section">
+
+        <section id="fiches" class="fiches-section"> --- 2e section qui se concentre sur l'aspect purement matériel des monuments avec une petite fiche détails pour chacun d'entre eux ---
             <div id="fiches-list">
-                <h2>Nos monuments</h2>
+                <h2>Nos monuments</h2> --> Titre de la Section
                 <div class="fiches-grid">
 
-                    <div class="fiche-card" onclick="showMonument('thermes-cluny')">
+                    <div class="fiche-card" onclick="showMonument('thermes-cluny')"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "fiche monument"
                         <h3>Thermes de Cluny</h3>
                         <div class="date">Ier et IIe siècle avant J-C.</div>
                         <p>Vestiges impressionnants des anciens bains romains de Lutèce.</p>
@@ -467,8 +469,8 @@
                 </div>
             </div>
 
-            <div id="eiffel" class="fiche-detail">
-                <button class="back-button" onclick="showFichesList()"></button>
+            <div id="eiffel" class="fiche-detail"> --- Ici se trouve les fiche détails par monuments ---
+                <button class="back-button" onclick="showFichesList()"></button> => Bouton retour en arrière qui permet de revenir à la 2e section
                 <h2>Tour Eiffel</h2>
                 <div class="date">Construction : 1887-1889</div>
                 <div class="content">
@@ -482,7 +484,7 @@
                 </div>
             </div>
 
-            <div id="pompidou" class="fiche-detail">
+            <div id="pompidou" class="fiche-detail"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "fiche détail"
                 <button class="back-button" onclick="showFichesList()"></button>
                 <h2>Centre Pompidou</h2>
                 <div class="date">Construction : 1887-1889</div>
@@ -968,12 +970,15 @@
 
             </div>
         </section>
-        <section>
+
+        <section> --- 3e section dédiée au parcours historique. Un simple parcours chronologique entre les 35 monuments choisis par le site ---
              <section id="parcours" class="parcours-section">    
                  <div class="parcours-container">
-                <h3>Paris et la France à travers les Âges</h3> <h2>La France Antique et Paris</h2>
+                <h3>Paris et la France à travers les Âges</h3> --> Titre de la section
 
-                <div class="etape" id="etape-arenes-de-lutece">
+                <h2>La France Antique et Paris</h2>
+
+                <div class="etape" id="etape-arenes-de-lutece"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "etape"
                     <h3>Les arènes de Lutèces et la Gaule pré-romaine jusqu'à la conquête de César</h3>
                     <div class="etape-date">Ier siècle av. J.-C.</div>
                     <div class="etape-content">
@@ -987,8 +992,8 @@
                             <p>La conquête romaine menée par Jules César au Ier siècle av. J.-C. bouleversa cet équilibre. En intégrant la Gaule à l’Empire, Rome imposa peu à peu ses institutions, ses infrastructures et son urbanisme. Les Arènes de Lutèce, édifiées au Ier siècle, illustrent pleinement cette romanisation. Petit à petit va alors se former la culture Gallo-romaine.</p>
                         </div>
                         <div class="etape-image">
-                            <img src="arene_image.jpg" alt="Arènes de Lutèces" style="width: 100%;">
-                        </div>
+                            <img src="arene_image.jpg" alt="Arènes de Lutèces" style="width: 100%;"> => Image qui illustre le monument
+                        </div> 
                     </div>
                 </div>
 
@@ -1009,7 +1014,7 @@
                     </div>
                 </div>
 
-                <h2>La France Médiévale et Paris</h2>
+                <h2>La France Médiévale et Paris</h2> => Titre de la section historique 
 
                 <div class="etape" id="etape-conciergerie">
                     <h3>Le Conciergerie, les débuts de Paris comme capital</h3>
@@ -1140,7 +1145,7 @@
                         <div class="etape-text">
                             <p>Le Pont Neuf, terminé en 1607, est l’un des monuments les plus emblématiques de la sortie des guerres de Religion. Construit sous Henri IV, il reflète la volonté royale de réunifier un royaume déchiré pendant près de quarante ans par les affrontements entre catholiques et protestants. Ces guerres, commencées en 1562, mêlent rivalités politiques, tensions théologiques et luttes pour le pouvoir. La monarchie y apparaît affaiblie, contestée, parfois incapable d’imposer la paix. Les massacres, comme celui de la Saint-Barthélemy en 1572, marquent durablement les esprits.</p>
                             
-                            <p>L’avènement d’Henri IV en 1589, ancien protestant devenu catholique pour accéder au trône, marque un tournant. Par l’Édit de Nantes en 1598, il reconnaît un cadre légal au <a href="#" onclick="showSection('sources'); setTimeout(() => document.getElementById('glossary-protestantisme').scrollIntoView({behavior: 'smooth'}), 300); return false;" class="glossary-link">protestantisme</a> tout en réaffirmant la primauté catholique. L’objectif est clair : restaurer l’unité du royaume et reconstruire l’autorité monarchique.</p>
+                            <p>L’avènement d’Henri IV en 1589, ancien protestant devenu catholique pour accéder au trône, marque un tournant. Par l’Édit de Nantes en 1598, il reconnaît un cadre légal au <a href="#" onclick="showSection('sources'); setTimeout(() => document.getElementById('glossary-protestantisme').scrollIntoView({behavior: 'smooth'}), 300); return false;" class="glossary-link">protestantisme</a> tout en réaffirmant la primauté catholique. L’objectif est clair : restaurer l’unité du royaume et reconstruire l’autorité monarchique.</p> => ici on retrouve un lien renvoyant vers le glossaire 
                             
                             <p>Le Pont Neuf nait à cette époque. Il est le plus ancien pont de Paris mais surtout son premier Pont en pierre, symbole d’un renouveau que le roi voulait imposer. La statue équestre d’Henri IV (érigée après son assassinat en 1610) rappelle le rôle du souverain comme pacificateur.</p>
                         </div>
@@ -1162,7 +1167,7 @@
                             <p>Après la mort de Louis XIII et de Richelieu, la régence d’Anne d’Autriche et l’autorité de Mazarin provoquent une réaction violente : la Fronde (1648–1653). Cette révolte des parlements, des princes et de certaines villes traduit le refus d’une monarchie perçue comme trop centralisatrice. Le jeune Louis XIV fuit même Paris. Mais la Fronde échoue, confirmant la victoire du modèle voulu par Richelieu : un État fort, uniforme et largement contrôlé depuis Paris. Le Palais-Royal devient alors le cœur politique d’un royaume en voie de modernisation.</p>
                         </div>
                         <div class="etape-image">
-                            <img src="palaisroyal.jpg" alt="Le Palais Royal" style="width: 100%">
+                            <img src="palaisroyal.jpg" alt="Le Palais Royal"style="width: 100%">
                         </div>
                     </div>
                 </div>
@@ -1247,7 +1252,7 @@
                             <p>Le Panthéon, perché sur la montagne Sainte-Geneviève, devient sous la Révolution un sanctuaire républicain dédié aux « grands hommes ». Ce monument, transformé en temple civique en 1791, incarne parfaitement la période du Directoire (1795–1799), moment charnière où la France sort du Gouvernement révolutionnaire. Après Thermidor, les députés cherchent à mettre fin à la radicalité politique, à l’économie dirigée et aux violences politiques. Le Directoire instaure un régime fondé sur la séparation stricte des pouvoirs et la défense d’un ordre social conservateur-bourgeois.</p>
                             
                             <p>Mais ce système est miné par des difficultés immenses : le pouvoir centriste hérité de la Plaine et des Girondins, refusent les victoires successives de l’extrême droite royaliste pour protéger la République et de la gauche néojacobine pour préserver les intérêts de la bourgeoisie. Le Panthéon incarne alors un idéal : celui d’une République modérée, rationnelle, libérale, célébrant les savants, les législateurs et les héros militaires. Pourtant, cet idéal reste fragile. Tandis que les directeurs ignorent les suffrages, les armées remportent de grands succès à l’étranger, offrant au jeune général Bonaparte une renommée immense. En 1799, les députés du centre agacé par la démocratie et la menace de l’arrivé de la  gauche au pouvoir, appel Napoléon pour faire un coup d’état laissant place au Consulat dès Novembre. </p>
-                                                    </div>
+                        </div>
                         <div class="etape-image">
                             <img src="pantheon.jpg" alt="Le Panthéon" style="width: 100%">
                         </div>
@@ -1523,12 +1528,12 @@
             </div>
         </section>
 
-    <section id="parcours-thematiques" class="parcours-thematiques-section">
+    <section id="parcours-thematiques" class="parcours-thematiques-section"> => 3e section dédiée aux différents parcours que l'on peut faire en suivant les monuments 
         <div class="parcours-thematiques-intro">
-            <h2>Parcours Thématiques</h2>
+            <h2>Parcours Thématiques</h2> --> Titre
             <p style="font-size: 1.2rem; line-height: 1.8; color: #4a4a4a; font-style: italic;">
                 Découvrez Paris à travers plusieurs parcours thématiques retraçant les grandes périodes de son histoire
-            </p>
+            </p> --> sous-titre 
         </div>
 
         <div class="parcours-grid">
@@ -1550,7 +1555,7 @@
                 </ul>
             </div>
 
-            <div class="parcours-card">
+            <div class="parcours-card"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de parcours 
                 <h3>Parcours du Paris Moderne</h3>
                 <ul class="parcours-liste">
                     <li>Hôtel de Ville</li>
@@ -1654,26 +1659,26 @@
         </div>
     </section>
 
-<section id="videotheque" class="videotheque-section">
+<section id="videotheque" class="videotheque-section"> --- 4e section sur la série de vidéo choisie pour compléter le cours d'Histoire de France proposée --- 
     <div class="container">
         <div class="parcours-thematiques-intro">
-            <h2>Vidéothèque</h2>
+            <h2>Vidéothèque</h2> --> Titre de la sectoion
             <p style="font-size: 1.2rem; line-height: 1.8; color: #4a4a4a; font-style: italic;">
                 Voici une collection de quelques vidéos complémentaires qui vous aideront à mieux appréhender l'Histoire de France.
-            </p>
+            </p> --> Sous-titre de la section
         </div>
 
         <div class="videos-grid">
-            <div class="video-card">
-                <h3>Fonctionnement et crise de la République Romaine</h3>
+            <div class="video-card"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "vidéo"
+                <h3>Fonctionnement et crise de la République Romaine</h3> --> titre de la vidéo
                 <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3_bx8wYXqas?si=5mI9HSJYsyKrNisU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3_bx8wYXqas?si=5mI9HSJYsyKrNisU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> --> Lien qui renvoit vers la vidéo en question
                 </div>
             </div>
 
             <div class="video-card">
                 <h3>Les guerres puniques</h3>
-                <div class="video-container">
+                <div class="video-container"> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/1ABxRizSfHw?si=9ZIh7RYYRqeyiooO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
@@ -1791,14 +1796,6 @@
             </div>
 
             <div class="video-card">
-                <h3>L'expérience financière de John Law</h3>
-                <div class="video-container">
-                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DFU8qfptAAw/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DFU8qfptAAw/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">Voir cette publication sur Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DFU8qfptAAw/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Une publication partagée par Hideo Press (@hideo_presss)</a></p></div></blockquote>
-                    <script async src="//www.instagram.com/embed.js"></script>
-                </div>
-            </div>
-
-            <div class="video-card">
                 <h3>La Révolution Française partie 1</h3>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/mbqdwHMfC6M?si=-vfOCDIDiiRyOqJi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -1886,15 +1883,15 @@
     </div>
 </section>
 
-<section id="sources" class="sources-section">
+<section id="sources" class="sources-section"> --- 5e section liée au sources, crédit et au glossaire ---
     <div class="container">
         <div class="sources-container">
-            <h2>Sources, Crédits et Glossaire</h2>
+            <h2>Sources, Crédits et Glossaire</h2> --> Titre de la section
 
-            <div class="source-section">
+            <div class="source-section"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre cette sous-section 
                 <h3>📚 Glossaire</h3>
                 
-                <div class="glossary-term" id="glossary-feodalite">
+                <div class="glossary-term" id="glossary-feodalite"> --> lien qui indique a quoi doit renvoyer cette "card" + Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "glossaire"
                     <strong>Féodalité :</strong> Système politique et social du Moyen Âge fondé sur des liens personnels entre seigneurs et vassaux. Le vassal prête serment de fidélité à son seigneur en échange de protection et d'un fief (généralement une terre). Ce système hiérarchique structurait la société médiévale européenne du Xe au XVe siècle.
                 </div>
 
@@ -1939,10 +1936,10 @@
                 </div>
             </div>
 
-            <div class="source-section">
+            <div class="source-section"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre cette sous-section 
                 <h3>📷 Crédits photographiques</h3>
                 
-                <div class="credit-item">
+                <div class="credit-item"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "crédit"
                     <strong>Arènes de Lutèce :</strong> © Wikimedia Commons / Pierre Poschadel (CC BY-SA 3.0)
                 </div>
                 <div class="credit-item">
@@ -1965,10 +1962,10 @@
                 </div>
             </div>
 
-           <div class="source-section">
+           <div class="source-section"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre cette sous-section
                 <h3>📖 Bibliographie et sitographie</h3>
 
-                <div class="biblio-item">
+                <div class="biblio-item"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "bibliographie"
                     Aprile, S. <em>1815—1870 : La Révolution inachevée</em>, Folio, 2020.
                 </div>
                 <div class="biblio-item">
@@ -2130,9 +2127,9 @@
     </div>
 </section>
 
-<section id="mentions-legales" class="mentions-legales-section">
+<section id="mentions-legales" class="mentions-legales-section"> --- 6e et dernière section dédiée aux mention s légales
     <div class="container">
-        <div class="mentions-container">
+        <div class="mentions-container"> --> Nom de "l'item" qui renvoit à la feuille CSS qui traduit comment doit apparaitre chaque "card" de la catégorie "mention légales"
             <h2>Mentions Légales</h2>
 
             <h3>Éditeur du site</h3>
@@ -2183,7 +2180,9 @@
                 Email : mzxeliot@gmail.com<br>
                 Téléphone : 07.83.65.28.94
             </p>
-            <p> Plus d'informations sur le site <a href="https://www.instagram.com/hideo_presss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Hidéo Press</a>. </p>
+
+            <p> Plus d'informations sur le site <a href="https://www.instagram.com/hideo_presss?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Hidéo Press</a>. </p> --> Lien spéciale que l'un des créateurs du site invite grandement à visiter
+        </div>            
         </div>
     </div>
 </section>
@@ -2197,12 +2196,12 @@
 
     <script>
     function showSection(section) {
-        // Affichage des sections principales
+        // --- Section Javascript qui permet l'affichage des sections principales ---
         document.getElementById('carte').style.display = section === 'carte' ? 'block' : 'none';
         document.getElementById('parcours').style.display = section === 'parcours' ? 'block' : 'none';
         document.getElementById('fiches').style.display = section === 'fiches' ? 'block' : 'none';
         
-        // Actions spécifiques selon la section
+        // --- Section Javascript qui permet les actions spécifiques selon la section --- 
         if (section === 'fiches') {
             showFichesList();
         }
@@ -2213,30 +2212,30 @@
     }
 
     function showMonument(monumentId) {
-        // Masquer la liste principale
+        // --- Section Javascript qui permet de masquer la liste principale ---
         document.getElementById('fiches-list').style.display = 'none';
         
-        // Désactiver toutes les fiches
+        // --- Section Javascript qui permet de désactiver toutes les fiches ---
         const fiches = document.querySelectorAll('.fiche-detail');
         fiches.forEach(fiche => fiche.classList.remove('active'));
         
-        // Activer la fiche sélectionnée
+        // --- Section Javascript qui permet d'activer la fiche sélectionnée ---
         const monument = document.getElementById(monumentId);
         if (monument) {
             monument.classList.add('active');
         }
         
-        // Afficher la section "fiches"
+        //  --- Section Javascript qui permet d'afficher la section "fiches"---
         const fichesSection = document.getElementById('fiches');
         fichesSection.style.display = 'block';
         fichesSection.classList.add('active');
         
-        // Remonter en haut de la page
+        // --- Section Javascript qui permet de remonter en haut de la page ---
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function showFichesList() {
-        // Réaffiche la liste des fiches et désactive les fiches détaillées
+        // --- Section Javascript qui permet de réafficher la liste des fiches et de désactiver les fiches détaillées ---
         document.getElementById('fiches-list').style.display = 'block';
         const fiches = document.querySelectorAll('.fiche-detail');
         fiches.forEach(fiche => fiche.classList.remove('active'));
@@ -2244,16 +2243,16 @@
     showSection('carte');
 
     function showEtape(etapeId) {
-    // Afficher la section parcours
+    // --- Section Javascript qui permet d'afficher la section parcours ---
     showSection('parcours');
     
-    // Attendre que la section soit affichée
+    // --- Section Javascript qui permet d'attendre que la section soit affichée ---
     setTimeout(function() {
-        // Trouver l'élément de l'étape
+        // --- Section Javascript qui permet de trouver l'élément de l'étape ---
         const etape = document.getElementById('etape-' + etapeId);
         
         if (etape) {
-            // Scroll jusqu'à l'étape avec un offset pour le header
+            // --- Section Javascript qui permet de scroller jusqu'à l'étape avec un offset pour le header ---
             const yOffset = -100; // ajustez selon la hauteur de votre header
             const y = etape.getBoundingClientRect().top + window.pageYOffset + yOffset;
             
@@ -2262,7 +2261,7 @@
                 behavior: 'smooth'
             });
             
-            // Optionnel : ajouter un effet visuel temporaire
+            // --- Section Javascript qui permet d'ajouter un effet visuel temporaire ---
             etape.style.backgroundColor = '#f4e4c1';
             setTimeout(function() {
                 etape.style.backgroundColor = '#f9f8f6';
@@ -2272,13 +2271,13 @@
 }
 
 function showSection(section) {
-    // Affichage des sections principales
+    // --- Section Javascript qui permet d'afficher des sections principales ---
     document.getElementById('carte').style.display = section === 'carte' ? 'block' : 'none';
     document.getElementById('parcours').style.display = section === 'parcours' ? 'block' : 'none';
     document.getElementById('parcours-thematiques').style.display = section === 'parcours-thematiques' ? 'block' : 'none';
     document.getElementById('fiches').style.display = section === 'fiches' ? 'block' : 'none';
     
-    // Actions spécifiques selon la section
+    // --- Section Javascript qui permet les actions spécifiques selon la section ---
     if (section === 'fiches') {
         showFichesList();
     }
@@ -2293,13 +2292,13 @@ function showSection(section) {
 }
 
 function showSection(section) {
-    // Masquer toutes les sections
+    // --- Section Javascript qui permet de masquer toutes les sections ---
     document.getElementById('carte').style.display = 'none';
     document.getElementById('parcours').style.display = 'none';
     document.getElementById('fiches').style.display = 'none';
     document.getElementById('parcours-thematiques').style.display = 'none';
     
-    // Masquer les nouvelles sections
+    // --- Section Javascript qui permet de masquer les nouvelles sections ---
     const videotheque = document.getElementById('videotheque');
     const sources = document.getElementById('sources');
     const mentionsLegales = document.getElementById('mentions-legales');
@@ -2308,12 +2307,12 @@ function showSection(section) {
     if (sources) sources.style.display = 'none';
     if (mentionsLegales) mentionsLegales.style.display = 'none';
     
-    // Retirer toutes les classes active
+    // --- Section Javascript qui permet de retirer toutes les classes active ---
     document.querySelectorAll('.parcours-section, .fiches-section, .parcours-thematiques-section, .videotheque-section, .sources-section, .mentions-legales-section').forEach(el => {
         el.classList.remove('active');
     });
     
-    // Afficher la section demandée
+    // --- Section Javascript qui permet d'afficher la section demandée ---
     if (section === 'carte') {
         document.getElementById('carte').style.display = 'block';
     } else if (section === 'parcours') {
@@ -2337,7 +2336,7 @@ function showSection(section) {
         document.getElementById('mentions-legales').classList.add('active');
     }
     
-    // Remonter en haut de la page
+    // --- Section Javascript qui permet de remonter en haut de la page ---
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
